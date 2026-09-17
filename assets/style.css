@@ -125,7 +125,9 @@ button {
 }
 
 .content > div {
-  height: fit-content;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
 }
 
 div > h1 {
@@ -169,4 +171,32 @@ div > h1 {
 
 .card > .button-group > *:hover {
   cursor: pointer;
+}
+
+.announcements-container {
+  flex-flow: column;
+}
+
+.announcements {
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.trending {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.profile-block {
+  display: grid;
+  grid-template: repeat(2, 1fr) / .5fr 3fr;
+}
+
+.profile-block > .profile-icons {
+  grid-row: span 2;
 }
