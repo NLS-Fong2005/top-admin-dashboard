@@ -9,14 +9,25 @@
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr 6fr / 1fr 4fr ;
+}
+
+body > * {
+  border: 2px solid black;
+  padding: 2rem;
+}
+
+.sidebar {
+  grid-row: span 2;
+}
+
 .dashboard-container {
   display: flex;
   gap: 1rem;
-}
-
-li > img,
-div > img {
-  height: 2rem;
+  margin-bottom: 2rem;
 }
 
 li {
@@ -24,7 +35,14 @@ li {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-bottom: .2rem;
 }
+
+li > img,
+div > img {
+  height: 2rem;
+}
+
 
 li:has(img[alt="Communities"]) {
   margin-bottom: 2rem; 
@@ -34,4 +52,69 @@ li:has(img[alt="Communities"]) {
   height: 3rem;
   width: 48px;
   border-radius: 50%;
+}
+
+.header {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.header > * {
+  display: flex;
+}
+
+.top-half > * {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  flex: 3;
+  margin: 0 2rem;
+  gap: 2rem;
+}
+
+.searchbar {
+  background-color: gray;
+  border: 0;
+  border-radius: 100vw;
+  height: 2rem;
+  width: 100%;
+}
+
+.user-profile {
+  flex: .5;
+  justify-content: space-around;
+}
+
+.bottom-half {
+  justify-content: space-between;
+}
+
+.user-block {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  gap: 1.5rem;
+}
+
+.user-block > .profile-icons {
+  width: 6rem;
+  height: 6rem;
+}
+
+.button-group {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+button {
+  border: 0;
+  font-size: larger;
+  border-radius: 100vw;
+  width: 8rem;
+  height: 4rem;
 }
