@@ -2,6 +2,17 @@
 
 /* * Use Everforest Colour Palette: https://everforest.vercel.app/ */
 
+:root {
+  --content-backdrop: #F2EFDF;
+  --sidebar-backdrop: #2D353B;
+  --header-backdrop: #D3C6AA;
+  --sidebar-text: #D3C6AA;
+  --card-backdrop: #FDF6E3;
+  --buttons-backdrop: #8DA101;
+  --headings-colour: #5C6A72;
+  --secondary-text-colour: #829181
+}
+
 * {
   font-family: "Roboto", "Times New Roman", Times, serif;
   box-sizing: border-box;
@@ -20,6 +31,7 @@ body > * {
 }
 
 .sidebar {
+  background-color: var(--sidebar-backdrop);
   grid-row: span 2;
 }
 
@@ -27,14 +39,16 @@ body > * {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+  color: var(--sidebar-text);
 }
 
 li {
-  font-size: 18px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: .2rem;
+  color: var(--sidebar-text)
 }
 
 li > img,
@@ -42,6 +56,9 @@ div > img {
   height: 2rem;
 }
 
+.web-icons {
+  filter: brightness(0) saturate(100%) invert(88%) sepia(11%) saturate(430%) hue-rotate(358deg) brightness(93%) contrast(88%);
+}
 
 li:has(img[alt="Communities"]) {
   margin-bottom: 2rem; 
@@ -54,6 +71,7 @@ li:has(img[alt="Communities"]) {
 }
 
 .header {
+  background-color: var(--header-backdrop);
   display: grid;
   grid-auto-flow: row;
 }
@@ -74,7 +92,7 @@ li:has(img[alt="Communities"]) {
 }
 
 .searchbar {
-  background-color: gray;
+  background-color: var(--card-backdrop);
   border: 0;
   border-radius: 100vw;
   height: 2rem;
@@ -112,13 +130,15 @@ li:has(img[alt="Communities"]) {
 
 button {
   border: 0;
-  font-size: larger;
+  font-size: 25px;
   border-radius: 100vw;
   width: 8rem;
   height: 4rem;
+  background-color: var(--buttons-backdrop);
 }
 
 .content {
+  background-color: var(--content-backdrop);
   display: grid;
   grid-template: repeat(2, 1fr) / 3fr 1fr;
   gap: 3rem;
@@ -150,9 +170,17 @@ div > h1 {
   flex-flow: column;
   padding: 3rem;
   border-radius: 1vw;
-  border-left: 5px solid red;
+  border-left: 5px solid #DFA000;
   height: 20vh;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card > h2 {
+  color: var(--headings-colour);
+}
+
+.card > p {
+  color: var(--secondary-text-colour);
 }
 
 .content-group {
@@ -183,6 +211,7 @@ div > h1 {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .trending {
@@ -190,6 +219,7 @@ div > h1 {
   flex-flow: column;
   gap: 2rem;
   padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .profile-block {
