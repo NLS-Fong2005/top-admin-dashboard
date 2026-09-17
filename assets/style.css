@@ -8,3 +8,24 @@
   margin: 0;
   padding: 0;
 }
+
+.dashboard-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.web-icon,
+li > img {
+  height: 2rem;
+}
+
+li {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+li:has(img[alt="Communities"]) {
+  margin-bottom: 2rem; 
+}
