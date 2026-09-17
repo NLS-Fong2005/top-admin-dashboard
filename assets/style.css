@@ -14,8 +14,8 @@
   gap: 1rem;
 }
 
-.web-icon,
-li > img {
+li > img,
+div > img {
   height: 2rem;
 }
 
@@ -28,4 +28,10 @@ li {
 
 li:has(img[alt="Communities"]) {
   margin-bottom: 2rem; 
+}
+
+.profile-icons {
+  height: 3rem;
+  width: 48px;
+  border-radius: 50%;
 }
